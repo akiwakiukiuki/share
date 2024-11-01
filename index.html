@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://gunmagisgeek.com/example/mergely/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>mergely example</title> 
+<script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+ 
+<!-- Mergelyライブラリの読み込み -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mergely@3.4.0/lib/mergely.min.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css">
+<link type="text/css" rel="stylesheet" href="./mergely example_files/mergely.css">
+ 
+</head>
+ 
+ 
+<body style="">
+    <div id="compare" style="width: 100%; display: block; clear: both;"><div>
+
+ 
+ 
+<script>
+$(document).ready(function () {
+	$('#compare').mergely({
+		cmsettings: { 
+			readOnly: false, //読込みのみ
+			lineNumbers: true //行番号の表示
+		},
+		lhs: function(setValue) {
+			setValue('日本語でも\nちゃんとdiff\nできますか？\n編集もできたりしますか？'); //比較元テキスト
+		},
+		rhs: function(setValue) {
+			setValue('日本語でも\nちゃんとdiff\nできる\n編集もできるので\n何か入力してみてね！'); //比較先テキスト
+		}
+	});
+});
+</script>
 
