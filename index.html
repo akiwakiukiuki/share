@@ -72,10 +72,10 @@ $(document).ready(function () {
 			lineNumbers: true //行番号の表示
 		},
 		lhs: function(setValue) {
-			setValue('abcdefg\nhijklmn'); //比較元テキスト
+			setValue('abcdefg\nhijklmn\nopqrstu'); //比較元テキスト
 		},
 		rhs: function(setValue) {
-			setValue('abcdefg'); //比較先テキスト
+			setValue('abcdefg\nopqrstu'); //比較先テキスト
 		}
 	});
 });
